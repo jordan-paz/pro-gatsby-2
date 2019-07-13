@@ -1,20 +1,36 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import styled from "@emotion/styled"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+
+const StyledSection = styled.section`
+  outline: 1px solid black;
+  padding: 1em;
+  display: flex;
+`
+
+const StyledTitle = styled.h1`
+  display: flex;
+  margin-bottom: 0.1em;
+`
+
+const StyledTagline = styled.p`
+  margin-top: 0;
+`
+
+const StyledTitleSection = styled.section`
+  display: block;
+`
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <StyledSection>
+      <StyledTitleSection>
+        <StyledTitle>Space Monkey Meds</StyledTitle>
+        <StyledTagline>Out of this world quality</StyledTagline>
+      </StyledTitleSection>
+    </StyledSection>
   </Layout>
 )
 

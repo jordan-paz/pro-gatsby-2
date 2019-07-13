@@ -1,9 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import styled from "@emotion/styled"
-import { Global, css } from "@emotion/core"
-import Header from "./header"
 
 const StyledLayout = styled.div`
   width: 100vw;
@@ -29,7 +26,6 @@ const Layout = ({ children }) => {
           }
         `}
       />
-      <Header siteTitle={data.site.siteMetadata.title} />
       {children}
     </StyledLayout>
   )
